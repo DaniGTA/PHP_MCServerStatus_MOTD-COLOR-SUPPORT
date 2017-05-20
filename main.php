@@ -1,3 +1,4 @@
+<?php
 class MCServerStatus {
 
     public  $server,$online, $motd, $online_players, $max_players,$error = "No Error";
@@ -24,7 +25,7 @@ class MCServerStatus {
                 $this->online_players = (int) $data[1];
                 $this->max_players = (int) $data[2];
 				
-            }elseif(sizeof($data) != 0){
+            }elseif(sizeof($data) != 1){
 
                 $this->motd = $data[0];
                 $x=1;
@@ -69,3 +70,4 @@ class MCServerStatus {
 }
 $connect=new MCServerStatus("localhost","25565");
 print_r($connect);
+?>
