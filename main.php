@@ -53,7 +53,7 @@ class MCServerStatus {
                  $this->motd .="<color style='color:#$colorcode'>".substr($data[$x],1)."</color>";
                 $x++;
 				}
-                $this->online_players = (int) $data[sizeof($data)];
+                $this->online_players = (int) $data[sizeof($data)-2];
                 $this->max_players = (int) $data[sizeof($data)-1];
 
             }else{
